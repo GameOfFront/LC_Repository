@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta httA-Compatible content="IE=edge">
+    <meta name="viewport" p-equiv="X-Ucontent="width="device-width", initial-scale="1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="aplicativo">
+        <p id="p1" style="color:red">Apenas reaja</p>
+        <p id="p2" style="color:green">2022</p>
+        <button onClick="alterarConteúdo()">Alterar conteúdo</button>
+    </div>
+    <script>
+        function alterarConteúdo() {
+          const p1 = document.getElementById('p1');
+          p1.textContent = 'Bem-vindo à Web';
+          const p2 = document.getElementById('p2');
+          p2.textContent = '1991';
+        }
+    </script>
+</body>
+</html>
