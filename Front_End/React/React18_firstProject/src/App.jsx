@@ -1,5 +1,12 @@
+import { BookList } from "./components/Book";
+import "./index.css";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <BookList />
+    </>
+  );
 }
 
 export default App;
