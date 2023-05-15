@@ -3,9 +3,9 @@ import doctorCare from "../../assets/doctor-care.svg"
 
 export const NavBar = () => {
     return(
-    <nav id="navigation">
+    <nav style={{display: "flex", height: "7.2rem", position:"fixed", top:"0",width:"100vw", zIndex:"100"}} id="navigation">
         <div className="logo"><img src={doctorCare} alt="" /></div>
-        <div className="wrapper">
+        <div style={{display:"flex", alignItems:"center",justifyContent:"space-between"}} className="wrapper">
             <ul className="menu">
                 <li>
                     <a>Início</a>
