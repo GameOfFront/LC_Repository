@@ -1,25 +1,32 @@
 import doctorCare from "../../assets/doctor-care.svg"
-
+import { Nav } from "../../styled/navStyled"
+import { DivMenu } from "../../styled/divStyled"
+import { MenuUp } from "../../styled/Menu"
+import { Botao } from "../../styled/BotaoStyled"
+import { Logo } from "../../styled/LogoStyled"
 
 export const NavBar = () => {
     return(
-    <nav style={{display: "flex", height: "7.2rem", position:"fixed", top:"0",width:"100vw", zIndex:"100"}} id="navigation">
-        <div className="logo"><img src={doctorCare} alt="" /></div>
-        <div style={{display:"flex", alignItems:"center",justifyContent:"space-between"}} className="wrapper">
-            <ul className="menu">
-                <li>
-                    <a>Início</a>
-                </li>
-                <li>
-                    <a>Serviços</a>
-                </li>
-                <li>
-                    <a>Sobre</a>
-                </li>
-            </ul>
-        </div>
-        <div><button>Agende sua consulta</button></div>
+    <Nav>
+        <DivMenu>
+            <div className="logo"><img src={doctorCare} alt="" /></div>
+            <Logo style={{}} className="menu">
+                <MenuUp >
+                    <li>
+                        <a>Início</a>
+                    </li>
+                    <li>
+                        <a>Serviços</a>
+                    </li>
+                    <li>
+                        <a>Sobre</a>
+                    </li>
+                </MenuUp>
+            </Logo>
+
+            <div><Botao>Agende sua consulta</Botao></div>
+        </DivMenu>
         
-    </nav>
+    </Nav>
     )
 }
