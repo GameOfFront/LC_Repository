@@ -1,16 +1,16 @@
 import doctorCare from "../../assets/doctor-care.svg"
-import { Nav } from "../../styled/navStyled"
-import { DivMenu } from "../../styled/divStyled"
-import { MenuUp } from "../../styled/Menu"
-import { Botao } from "../../styled/BotaoStyled"
-import { Logo } from "../../styled/LogoStyled"
+import { Nav } from "../../styled/NavBar/navStyled"
+import { DivMenu } from "../../styled/NavBar/divStyled"
+import { MenuUp } from "../../styled/NavBar/Menu"
+import { Botao } from "../../styled/NavBar/BotaoStyled"
+import { Logo } from "../../styled/NavBar/LogoStyled"
 
 export const NavBar = () => {
     return(
     <Nav>
         <DivMenu>
             <div className="logo"><img src={doctorCare} alt="" /></div>
-            <Logo style={{}} className="menu">
+            <Logo  className="menu">
                 <MenuUp >
                     <li>
                         <a>Início</a>
@@ -26,7 +26,6 @@ export const NavBar = () => {
 
             <div><Botao>Agende sua consulta</Botao></div>
         </DivMenu>
-        
     </Nav>
     )
 }
