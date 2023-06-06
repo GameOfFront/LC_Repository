@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --hue: 190;
     --primary-color: hsl(var(--hue), 100%, 26%);

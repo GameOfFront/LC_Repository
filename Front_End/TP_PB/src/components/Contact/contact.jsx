@@ -1,12 +1,17 @@
 /* eslint-disable react/jsx-no-target-blank */
 import HomemCelular from "../../assets/HomemDeCelular.png"
-import { Section } from "../../styled/ContactedStyled/contactStyled"
-import { Wrapper } from "../../styled/ContactedStyled/wrapper"
-import { Ul } from "../../styled/ContactedStyled/contentUlStyled"
-import { Li } from "../../styled/ContactedStyled/LIStyled"
-import { Button } from "../../styled/ContactedStyled/Button"
+import { Button, Li, Section, Ul, Wrapper } from "./styles"
+import jsonData from "./localizacao.json"
+import { useEffect } from "react";
+import { useState } from "react";
 
 export const Contact = () =>{
+    const [url, setUrl] = useState("");    
+    useEffect(() => {
+        // Atribua a URL ao estado
+        setUrl(jsonData.url);
+      }, []);
+
     return(
         <Section style={{backgroundColor:"hsl(180, 14%, 97%)"}} id="contact">
             <Wrapper className="wrapper">
@@ -100,6 +105,11 @@ export const Contact = () =>{
                     alt="Homem negro com moletom bege mexendo no celular e sorrindo"
                     />
                 </div>
+
+                <div>
+                    {/* Exiba a URL */}
+                    <iframe src={url}></iframe>
+                </div>                
             </Wrapper>
         </Section>
     )

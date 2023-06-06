@@ -6,6 +6,8 @@ import { About } from './components/About/about'
 import { Contact } from './components/Contact/contact'
 import { Footer } from './components/Footer/footer'
 
+
+
 // eslint-disable-next-line react-refresh/only-export-components
 export const LC = () => {
 

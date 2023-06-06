@@ -1,31 +1,32 @@
-import doctorCare from "../../assets/doctor-care.svg"
-import { Nav } from "../../styled/NavBar/navStyled"
-import { DivMenu } from "../../styled/NavBar/divStyled"
-import { MenuUp } from "../../styled/NavBar/Menu"
-import { Botao } from "../../styled/NavBar/BotaoStyled"
-import { Logo } from "../../styled/NavBar/LogoStyled"
+import doctorCare from "../../assets/doctor-care.svg";
+import { ButtonLink } from "../../styles";
+import whatsapp from "../../assets/whatsapp.svg"
+import { DivMenu, Logo, MenuUp, Nav } from "./styles";
 
 export const NavBar = () => {
-    return(
-    <Nav>
-        <DivMenu>
-            <div className="logo"><img src={doctorCare} alt="" /></div>
-            <Logo  className="menu">
-                <MenuUp >
-                    <li>
-                        <a>Início</a>
-                    </li>
-                    <li>
-                        <a>Serviços</a>
-                    </li>
-                    <li>
-                        <a>Sobre</a>
-                    </li>
-                </MenuUp>
-            </Logo>
+  return(
+  <Nav>
+      <DivMenu>
+          <div className="logo"><img src={doctorCare} alt="" /></div>
+          <Logo  className="menu">
+              <MenuUp >
+                <li className="text-2xl">
+                  <a href="#home" className="text-black no-underline">Início</a>
+                </li>
+                <li className="text-2xl">
+                  <a href="#services" className="text-black no-underline">Serviços</a>
+                </li>
+                <li className="text-2xl">
+                  <a href="#about" className="text-black no-underline">Sobre</a>
+                </li>
+              </MenuUp>
+          </Logo>
 
-            <div><Botao>Agende sua consulta</Botao></div>
-        </DivMenu>
-    </Nav>
-    )
+          <ButtonLink className="mt-5 flex items-center justify-center gap-4" href="#contact">
+                <img src={whatsapp} alt="" />
+                Agende sua consulta
+              </ButtonLink>
+      </DivMenu>
+  </Nav>
+  )
 }
