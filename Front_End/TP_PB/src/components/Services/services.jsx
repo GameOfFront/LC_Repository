@@ -3,17 +3,17 @@ import { Card, Cards, H2_, H4_, Paragrafo, WrapperServices } from "./styles"
 export const Services = () => {
     return(
         <section className="py-4 custom-padding-block bg-customCinza" id="services">
-            <WrapperServices className="wrapper">
+            <WrapperServices className="">
                 <header className="block text-center overflow-auto">
                     <div className="relative">
                         <H4_>Serviços</H4_>
                         <H2_>Como podemos ajudá-lo a se sentir melhor?</H2_>
                     </div>
-                    <div className="absolute inset-0 bg-opacity-25 "></div>
+                    
                 </header>
                 
                 <div className="relative">
-                    <div className="absolute inset-0  bg-opacity-25"></div>
+                    
                     <div className="text-center overflow-auto">
                         <Cards className="cards">
                             <Card className="card">

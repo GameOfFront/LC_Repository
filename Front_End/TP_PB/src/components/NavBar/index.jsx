@@ -22,8 +22,8 @@ export const NavBar = () => {
               </MenuUp>
           </Logo>
 
-          <ButtonLink className="mt-5 flex items-center justify-center gap-4" href="#contact">
-                <img src={whatsapp} alt="" />
+          <ButtonLink className=" mt-5 flex items-center justify-center gap-4" href="#contact">
+                <img className="" src={whatsapp} alt="" />
                 Agende sua consulta
               </ButtonLink>
       </DivMenu>

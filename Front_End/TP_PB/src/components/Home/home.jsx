@@ -18,7 +18,7 @@ export const Home = () => {
                             Os médicos da DoctorCare vão além dos sintomas para tratar a causa
                             raiz de sua doença e proporcionar uma cura a longo prazo.
                         </P_content>
-                        <ButtonLink ><img src={whatsapp} alt="" />Agende sua consulta</ButtonLink>
+                        <ButtonLink className="2xl:ml-[400px]" ><img src={whatsapp} alt="" />Agende sua consulta</ButtonLink>
                     </div>
                 </Col_a>
 

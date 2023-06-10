@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import HomemCelular from "../../assets/HomemDeCelular.png"
-import { Button, Li, Section, Ul, Wrapper } from "./styles"
+import { Button, EntreEmContato, Img, Li, Localizacao, Section, Ul, Wrapper } from "./styles"
 import jsonData from "./localizacao.json"
 import { useEffect } from "react";
 import { useState } from "react";
@@ -17,7 +17,7 @@ export const Contact = () =>{
             <Wrapper className="wrapper">
                 <div style={{gridArea:"A"}} className="col-a">
                     <header style={{marginBottom:"3.2rem"}}>
-                        <h2 style={{width:"40.4rem",fontSize:"4rem",lineHeight:"5.2rem",color:"hsl(210,11%,15%)"}}>Entre em contato com a gente!</h2>
+                        <EntreEmContato>Entre em contato com a gente!</EntreEmContato>
                     </header>
         
                     <div className="content">
@@ -100,16 +100,15 @@ export const Contact = () =>{
                 </div>
         
                 <div style={{gridArea:"B"}} className="col-b">
-                    <img style={{maxWidth:"100%"}}
-                    src={HomemCelular}
+                    <Img src={HomemCelular}
                     alt="Homem negro com moletom bege mexendo no celular e sorrindo"
                     />
                 </div>
 
-                <div>
+                <Localizacao>
                     {/* Exiba a URL */}
                     <iframe src={url}></iframe>
-                </div>                
+                </Localizacao>                
             </Wrapper>
         </Section>
     )

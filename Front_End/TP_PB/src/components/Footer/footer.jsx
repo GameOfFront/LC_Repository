@@ -4,8 +4,8 @@
 export const Footer = () =>{
     return(
         <footer className="bg-customBlueColor py-32 text-left">
-            <div className=" container ml-96 px-4">
-                <div className="grid grid-cols-2 gap-8 ">
+            <div className=" container ml-96 px-4 sm:ml-0">
+                <div className="grid grid-cols-2 gap-8 sm:grid-cols-1 ">
                     <div className="self-center">
                         <div className="inline-block mb-6" href="#home">
                             <svg
@@ -64,7 +64,7 @@ export const Footer = () =>{
                         </p>
                     </div>
 
-                    <div className="self-center justify-end ml-[500px]">
+                    <div className="self-center justify-end ml-[500px] sm:hidden">
                         <ul className="flex items-center justify-start space-x-4">
                             <li>
                                 <a target="_blank" href="https://instagram.com/maykbrito"
@@ -152,4 +152,3 @@ export const Footer = () =>{
   
     )
 }
-

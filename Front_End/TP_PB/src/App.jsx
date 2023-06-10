@@ -19,6 +19,7 @@ export const LC = () => {
       <About/>
       <Contact/>
       <Footer/>
+      
     </>
   )
 }
