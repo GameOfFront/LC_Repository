@@ -1,0 +1,40 @@
+﻿@page
+@model LojaDeLivros.Pages.ListagemModel
+@{
+}
+
+<h1>Listagem de Produtos/Serviços</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Marca</th>
+            <th>Opções</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.ListaDeProdutos != null && Model.ListaDeProdutos.Any())
+        {
+            @foreach (var produto in Model.ListaDeProdutos)
+            {
+                <tr>
+                    <td>@produto.Nome</td>
+                    <td>@produto.Preco</td>
+                    <td>@produto.Marca.Nome</td>
+                    <td>
+                        <a asp-page="./Detalhe" asp-route-id="@produto.Id">Detalhes</a> |
+                        <a asp-page="./Exclusao" asp-route-id="@produto.Id">Excluir</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4">Nenhum produto encontrado.</td>
+            </tr>
+        }
+    </tbody>
+</table>

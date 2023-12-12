@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [WINDOWS\luiza]
+    FROM WINDOWS;
+

@@ -1,0 +1,27 @@
+﻿@page
+@model LojaDeLivros.Pages.IncluirProdutoModel
+@{
+}
+
+<h1>Inclusão de Produto/Serviço</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="NovoProduto.Nome"></label>
+        <input asp-for="NovoProduto.Nome" />
+        <span asp-validation-for="NovoProduto.Nome"></span>
+    </div>
+    <div>
+        <label asp-for="NovoProduto.Preco"></label>
+        <input asp-for="NovoProduto.Preco" />
+        <span asp-validation-for="NovoProduto.Preco"></span>
+    </div>
+    <div>
+        <label asp-for="NovoProduto.MarcaId"></label>
+        <select asp-for="NovoProduto.MarcaId" asp-items="Model.Marcas">
+            <option value="">Selecione uma marca</option>
+        </select>
+        <span asp-validation-for="NovoProduto.MarcaId"></span>
+    </div>
+    <button type="submit">Adicionar Produto</button>
+</form>

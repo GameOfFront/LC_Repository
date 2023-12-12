@@ -1,0 +1,104 @@
+23/11/2023 22:12:19	Este log contém informações sobre a operação do esquema importado no projeto 'BancoDeDados' no computador 'WINDOWS' pelo usuário 'luiza'.
+23/11/2023 22:12:20	A importação do esquema de banco de dados foi iniciada.
+23/11/2023 22:12:20	Coletando mensagens de erro
+23/11/2023 22:12:20	Coletando provedores criptográficos
+23/11/2023 22:12:20	Coletando credenciais
+23/11/2023 22:12:20	Coletando logons
+23/11/2023 22:12:20	Coletando funções de servidor
+23/11/2023 22:12:20	Coletando associações de função do servidor
+23/11/2023 22:12:20	Coletando servidores vinculados
+23/11/2023 22:12:20	Coletando logons de servidor vinculado
+23/11/2023 22:12:20	Coletando rotas
+23/11/2023 22:12:20	Coletando gatilhos ddl
+23/11/2023 22:12:20	Coletando gatilhos ddl criptografados e clr
+23/11/2023 22:12:20	Coletando notificações de eventos
+23/11/2023 22:12:20	Coletando auditorias de servidor
+23/11/2023 22:12:20	Coletando especificações de auditoria de servidor
+23/11/2023 22:12:20	Coletando notificações de eventos
+23/11/2023 22:12:20	Coletando credenciais do banco de dados
+23/11/2023 22:12:20	Coletando opções de banco de dados
+23/11/2023 22:12:20	Reunindo a opção de configuração no escopo do banco de dados genérico
+23/11/2023 22:12:20	Coletando usuários
+23/11/2023 22:12:20	Coletando funções
+23/11/2023 22:12:20	Coletando funções de aplicativo
+23/11/2023 22:12:20	Coletando associações de função
+23/11/2023 22:12:20	Coletando grupos de arquivos
+23/11/2023 22:12:20	Coletando arquivos
+23/11/2023 22:12:20	Coletando catálogos de texto completo
+23/11/2023 22:12:20	Coletando assemblies
+23/11/2023 22:12:20	Coletando certificados
+23/11/2023 22:12:20	Coletando chaves assimétricas
+23/11/2023 22:12:20	Coletando chaves simétricas
+23/11/2023 22:12:20	Coletando chaves simétricas criptografadas
+23/11/2023 22:12:20	Coletando chaves de criptografia de banco de dados
+23/11/2023 22:12:20	Coletando esquemas
+23/11/2023 22:12:20	Coletando coleções de esquema XML
+23/11/2023 22:12:20	Coletando tipos de dados definidos pelo usuário
+23/11/2023 22:12:20	Coletando tipos definidos pelo usuário
+23/11/2023 22:12:20	Coletando tipos de tabela
+23/11/2023 22:12:20	Coletando chaves exclusivas para tipos de tabela
+23/11/2023 22:12:20	Coletando chaves primárias para tipos de tabela
+23/11/2023 22:12:20	Reunindo índices para tipos de tabela
+23/11/2023 22:12:20	Coletando restrições de verificação para tipos de tabela
+23/11/2023 22:12:20	Coletando restrições padrão para tipos de tabela
+23/11/2023 22:12:20	Coletando funções de partição
+23/11/2023 22:12:20	Coletando esquemas de partição
+23/11/2023 22:12:20	Coletando funções
+23/11/2023 22:12:20	Coletando funções criptografadas
+23/11/2023 22:12:20	Coletando agregações
+23/11/2023 22:12:20	Coletando procedimentos
+23/11/2023 22:12:20	Coletando procedimentos criptografados
+23/11/2023 22:12:20	Coletando tabelas
+23/11/2023 22:12:20	Coletando chaves primárias
+23/11/2023 22:12:20	Coletando restrições exclusivas
+23/11/2023 22:12:20	Coletando chaves estrangeiras
+23/11/2023 22:12:20	Coletando restrições padrão
+23/11/2023 22:12:20	Coletando restrições de verificação
+23/11/2023 22:12:20	Coletando exibições
+23/11/2023 22:12:20	Coletando exibições criptografadas
+23/11/2023 22:12:20	Coletando índices
+23/11/2023 22:12:20	Coletando estatísticas
+23/11/2023 22:12:20	Coletando listas de palavras irrelevantes de índice de texto completo
+23/11/2023 22:12:20	Coletando listas de propriedades de pesquisa
+23/11/2023 22:12:20	Coletando propriedades de pesquisa
+23/11/2023 22:12:20	Coletando índices de texto completo
+23/11/2023 22:12:20	Coletando índices de repositório de coluna
+23/11/2023 22:12:20	Coletando índices espaciais
+23/11/2023 22:12:20	Coletando índices XML
+23/11/2023 22:12:20	Reunindo índices XML Seletivos
+23/11/2023 22:12:20	Coletando gatilhos criptografados
+23/11/2023 22:12:20	Coletando gatilhos
+23/11/2023 22:12:20	Coletando gatilhos ddl criptografados e clr
+23/11/2023 22:12:20	Coletando gatilhos ddl
+23/11/2023 22:12:20	Criando restrições de borda
+23/11/2023 22:12:20	Coletando sinônimos
+23/11/2023 22:12:20	Coletando padrões
+23/11/2023 22:12:20	Coletando ligações uddt de restrições de dados
+23/11/2023 22:12:20	Coletando regras
+23/11/2023 22:12:20	Coletando ligações uddt de restrições de dados
+23/11/2023 22:12:20	Coletando tipos de mensagem
+23/11/2023 22:12:20	Coletando filas
+23/11/2023 22:12:20	Coletando contratos
+23/11/2023 22:12:20	Coletando serviços
+23/11/2023 22:12:20	Coletando rotas
+23/11/2023 22:12:20	Coletando notificações de eventos
+23/11/2023 22:12:20	Coletando ligações de serviço remoto
+23/11/2023 22:12:20	Coletando prioridades do agente
+23/11/2023 22:12:20	Coletando especificações de auditoria de banco de dados
+23/11/2023 22:12:20	Coletando assinaturas
+23/11/2023 22:12:20	Coletando opções de compactação
+23/11/2023 22:12:20	Coletando tipos de sequência
+23/11/2023 22:12:20	Reunindo as políticas de segurança
+23/11/2023 22:12:20	Coletar chaves de criptografia de coluna
+23/11/2023 22:12:20	Coletando chaves mestre de coluna
+23/11/2023 22:12:20	Coletando fontes de dados externas
+23/11/2023 22:12:20	Coletando formatos de arquivo externo
+23/11/2023 22:12:20	Coletando tabelas externas
+23/11/2023 22:12:20	Coletando permissões de banco de dados
+23/11/2023 22:12:20	Coletando propriedades estendidas
+23/11/2023 22:12:20	Coletando assemblies
+23/11/2023 22:12:21	Examinando projeto para elementos duplicados
+23/11/2023 22:12:21	Processamento de elementos duplicados concluído
+23/11/2023 22:12:21	Importação do banco de dados concluída.
+23/11/2023 22:12:21	Um resumo da importação foi salvo no seguinte local: C:\Users\luiza\Documents\GitHub\LC_Repository\LojaDeLivros\LojaDeLivros\BancoDeDados\Importar Logs de Esquema\BancoDeDados_20231124011219.log.
+23/11/2023 22:12:21	Clique em Concluir para continuar...

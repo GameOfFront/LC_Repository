@@ -1,0 +1,77 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Sua Livraria</title>
+    <style>
+        /* Adicione este estilo para centralizar o texto */
+        .section {
+            text-align: center;
+        }
+
+        /* Adicione este estilo para usar flexbox */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Adicione este estilo para dar espaço entre a imagem e o texto */
+        img {
+            margin-right: 20px; /* Ajuste conforme necessário */
+        }
+
+        /* Adicione este estilo para usar flexbox na main */
+        main {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            <img src="/logo_cantinho.svg" width="500" height="500" />
+            <div class="section">
+                <section>
+                    <h2>Nossa História</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna vitae velit bibendum imperdiet.
+                        Vestibulum convallis, libero at aliquam malesuada, dolor velit fringilla arcu, id commodo velit felis id purus.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>O que nos torna únicos</h2>
+                    <p>
+                        Curabitur varius, eros vel luctus tempor, odio justo feugiat velit, at ullamcorper quam est eu justo.
+                        Integer vitae neque in eros ultrices tincidunt nec eu justo. Sed id lacus nec nunc ultricies sodales.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Por que amamos o que fazemos</h2>
+                    <p>
+                        Fusce tincidunt erat vel urna congue, at tempor purus eleifend. Ut in justo vel dolor consectetur semper.
+                        Suspendisse potenti. Morbi facilisis justo in semper posuere. Sed euismod sapien ac justo feugiat, vel vulputate felis rhoncus.
+                    </p>
+                </section>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <!-- Seu rodapé aqui -->
+    </footer>
+
+</body>
+</html>

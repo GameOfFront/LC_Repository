@@ -1,0 +1,17 @@
+﻿@page
+@model ExclusaoModel
+@{
+}
+
+<h1>Excluir Produto/Serviço</h1>
+
+<div>
+    <strong>Nome:</strong> @Model.Produto.Nome
+</div>
+<div>
+    <strong>Preço:</strong> @Model.Produto.Preco
+</div>
+
+<form method="post" asp-page-handler="Excluir" asp-route-id="@Model.Produto.Id">
+    <button type="submit">Excluir Produto/Serviço</button>
+</form>
