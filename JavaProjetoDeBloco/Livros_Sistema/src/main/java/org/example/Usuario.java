@@ -1,5 +1,6 @@
 package org.example;
 import jakarta.persistence.*;
+
 import java.util.List;
 
 @Entity
@@ -22,7 +23,11 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private List<Livro> livros;
 
-    // Construtores
+    // Additional fields for Livro context
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private List<Endereco> enderecos;
+
+    // Constructors
     public Usuario() {
     }
 
@@ -32,6 +37,7 @@ public class Usuario {
         this.senha = senha;
     }
 
+    // Getters and Setters
     public Long getId() {
         return id;
     }
@@ -64,11 +70,20 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public List<Livro> getFilmes() {
+    public List<Livro> getLivros() {
         return livros;
     }
 
-    public void setFilmes(List<Livro> filmes) {
+    public void setLivros(List<Livro> livros) {
         this.livros = livros;
+    }
+
+    // Additional getters and setters for Livro context
+    public List<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
     }
 }

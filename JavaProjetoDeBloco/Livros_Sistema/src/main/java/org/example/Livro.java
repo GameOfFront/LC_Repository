@@ -22,6 +22,14 @@ public class Livro {
     @Column(name = "recomendacao_livro")
     private String recomendacaoLivro;
 
+    // New fields added from Filme class
+    @ManyToOne
+    @JoinColumn(name = "id_endereco")
+    private Endereco endereco;
+
+    @Column(name = "cep_livro")
+    private String cep;
+
     public Livro() {
     }
 
@@ -33,34 +41,42 @@ public class Livro {
     }
 
     public Long getId() {
+
         return id;
     }
 
     public void setId(Long id) {
+
         this.id = id;
     }
 
     public Usuario getUsuario() {
+
         return usuario;
     }
 
     public void setUsuario(Usuario usuario) {
+
         this.usuario = usuario;
     }
 
     public String getNomeLivro() {
+
         return nome;
     }
 
     public void setNomeLivro(String nomeLivro) {
+
         this.nome = nomeLivro;
     }
 
     public float getNotaLivro() {
+
         return notaLivro;
     }
 
     public void setNotaLivro(float notaLivro) {
+
         this.notaLivro = notaLivro;
     }
 
@@ -69,6 +85,30 @@ public class Livro {
     }
 
     public void setRecomendacaoLivro(String recomendacaoLivro) {
+
         this.recomendacaoLivro = recomendacaoLivro;
+    }
+
+    public Endereco getEndereco() {
+
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+
+        this.endereco = endereco;
+    }
+
+    public String getCepLivro() {
+        return cep;
+    }
+
+    public void setCepLivro(String cep) {
+
+        this.cep = cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
     }
 }
