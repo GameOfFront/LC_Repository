@@ -1,0 +1,8 @@
+Chave primária
+
+openssl genpkey -algorithm RSA -out server.key
+
+
+certificado autoassinado:
+
+openssl req -new -x509 -key server.key -out server.crt -days 365
