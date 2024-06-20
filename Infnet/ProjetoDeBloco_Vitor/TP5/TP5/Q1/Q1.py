@@ -1,58 +1,62 @@
-import os
-import sys
-
-sys.path.append('/home/luiz/.local/lib/python3.10/site-packages')
-
 import networkx as nx
 import matplotlib.pyplot as plt
-import numpy as np
+import heapq
 
-dist_matrix = np.array([
-    [0, 10, 5, 7, 3, 2],
-    [10, 0, 8, 4, 6, 9],
-    [5, 8, 0, 1, 2, 3],
-    [7, 4, 1, 0, 5, 6],
-    [3, 6, 2, 5, 0, 4],
-    [2, 9, 3, 6, 4, 0]
-])
+def dijkstra(graph, start):
+    distances = {node: float('inf') for node in graph}
+    distances[start] = 0
+    priority_queue = [(0, start)]
+    shortest_path_tree = {start: None}
 
-def prim(graph):
-    n = len(graph)
-    selected = [False] * n
-    selected[0] = True
-    mst_edges = []
+    while priority_queue:
+        current_distance, current_node = heapq.heappop(priority_queue)
 
-    for _ in range(n - 1):
-        min_weight = float('inf')
-        u = -1
-        v = -1
-        for i in range(n):
-            if selected[i]:
-                for j in range(n):
-                    if not selected[j] and graph[i][j]:
-                        if min_weight > graph[i][j]:
-                            min_weight = graph[i][j]
-                            u = i
-                            v = j
-        mst_edges.append((u, v, min_weight))
-        selected[v] = True
+        if current_distance > distances[current_node]:
+            continue
 
-    return mst_edges
+        for neighbor, weight in graph[current_node].items():
+            distance = current_distance + weight
 
-def build_mst(edges):
-    mst = nx.Graph()
-    for u, v, weight in edges:
-        mst.add_edge(u, v, weight=weight)
-    return mst
+            if distance < distances[neighbor]:
+                distances[neighbor] = distance
+                heapq.heappush(priority_queue, (distance, neighbor))
+                shortest_path_tree[neighbor] = current_node
 
-def plot_graph(graph):
-    pos = nx.spring_layout(graph)
-    nx.draw(graph, pos, with_labels=True, node_color='lightblue', node_size=700, font_size=10)
-    labels = nx.get_edge_attributes(graph, 'weight')
-    nx.draw_networkx_edge_labels(graph, pos, edge_labels=labels)
+    return distances, shortest_path_tree
+
+def create_graph():
+    graph = {
+        'A': {'B': 10, 'C': 5, 'D': 7, 'E': 3, 'F': 2},
+        'B': {'A': 10, 'C': 8, 'D': 4, 'E': 6, 'F': 9},
+        'C': {'A': 5, 'B': 8, 'D': 1, 'E': 2, 'F': 3},
+        'D': {'A': 7, 'B': 4, 'C': 1, 'E': 5, 'F': 6},
+        'E': {'A': 3, 'B': 6, 'C': 2, 'D': 5, 'F': 4},
+        'F': {'A': 2, 'B': 9, 'C': 3, 'D': 6, 'E': 4}
+    }
+    return graph
+
+def plot_graph(graph, shortest_path_tree):
+    G = nx.Graph()
+
+    for node, edges in graph.items():
+        for neighbor, weight in edges.items():
+            G.add_edge(node, neighbor, weight=weight)
+
+    pos = nx.spring_layout(G)
+    edge_labels = nx.get_edge_attributes(G, 'weight')
+
+    plt.figure(figsize=(10, 8))
+    nx.draw(G, pos, with_labels=True, node_size=3000, node_color='skyblue', font_size=20, font_weight='bold', edge_color='black')
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=15)
+
+    mst_edges = [(v, k) for k, v in shortest_path_tree.items() if v is not None]
+    nx.draw_networkx_edges(G, pos, edgelist=mst_edges, edge_color='r', width=2)
+
     plt.show()
 
-mst_edges = prim(dist_matrix)
-mst = build_mst(mst_edges)
-plot_graph(mst)
-
+if __name__ == "__main__":
+    graph = create_graph()
+    distances, shortest_path_tree = dijkstra(graph, 'A')
+    print("Distâncias mais curtas a partir de A:", distances)
+    print("Árvore de caminhos mais curtos:", shortest_path_tree)
+    plot_graph(graph, shortest_path_tree)
