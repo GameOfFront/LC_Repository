@@ -1,0 +1,33 @@
+{
+  "id": 1713,
+  "opin": true,
+  "grupo": "Home Insurance",
+
+  "schema": {
+    "friends": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Friend",
+        "properties": {
+          "nickname": {
+            "type": "string",
+            "title": "Nickname",
+            "required": true
+          },
+          "gender": {
+            "type": "string",
+            "title": "Gender",
+            "enum": ["male", "female"]
+          },
+          "age": {
+            "type": "integer",
+            "title": "Age"
+          }
+        }
+      }
+    }
+  }
+
+}
+  

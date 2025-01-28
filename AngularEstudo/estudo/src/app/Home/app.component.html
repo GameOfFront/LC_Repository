@@ -1,0 +1,70 @@
+<div class="flex h-screen">
+  <!-- Sidebar para os botões -->
+  <div class="w-1/4 bg-gray-200 shadow-lg p-6">
+    <button (click)="onManutencaoProdutos()" class="mb-4 text-red-600 text-xl font-bold w-full p-2 bg-white shadow-md rounded">
+      Manutenção Produtos
+    </button>
+  </div>
+
+  <!-- Área de conteúdo -->
+  <div class="w-3/4 p-6">
+    <div *ngIf="mostrarProdutos">
+      <div class="flex justify-between items-center mb-4">
+        <!-- Dropdown alinhado à esquerda -->
+        <div class="flex items-center">
+          <label for="apiSelect" class="mr-2">Selecione uma API:</label>
+          <select id="apiSelect" (change)="onApiChange($event)" class="bg-white p-2 rounded border">
+            <option value="" disabled selected>Escolha um grupo de APIs</option>
+            <option value="HomeInsurance">Home Insurance</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Tabela com os dados das APIs -->
+      <table *ngIf="dadosApis.length > 0" class="min-w-full mt-4 border-collapse border border-gray-400">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border p-2">OPIN?</th>
+            <th class="border p-2">ID</th>
+            <th class="border p-2">Descrição</th>
+            <th class="border p-2">Editar</th> <!-- Nova coluna para o botão "Editar" -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let api of dadosApis">
+            <td class="border p-2 text-center">{{ api.opin ? 'Sim' : 'Não' }}</td>
+            <td class="border p-2 text-center">{{ api.id }}</td>
+            <td class="border p-2 text-center">{{ api.grupo }}</td>
+            <td class="border p-2 text-center">
+              <button (click)="onEdit(api)" class="text-blue-500 hover:text-blue-700">Editar</button> <!-- Botão de edição -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal para exibir o JSON -->
+  <div *ngIf="mostrarModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
+    <div class="bg-white w-1/2 rounded-lg shadow-lg p-6">
+      <h2 class="text-xl font-bold mb-4">Detalhes do JSON</h2>
+
+      <div class="flex">
+        <!-- Exibir JSON na esquerda -->
+        <div class="w-1/2 bg-gray-100 p-4 rounded">
+          <pre>{{ jsonSelecionado | json }}</pre> <!-- Visualiza o JSON formatado -->
+        </div>
+
+        <!-- Conteúdo do lado direito (se precisar adicionar algo no futuro) -->
+        <div class="w-1/2 p-4">
+          <p>Aqui pode adicionar algo no futuro</p>
+        </div>
+      </div>
+
+      <!-- Botão para fechar o modal -->
+      <div class="flex justify-end mt-4">
+        <button (click)="fecharModal()" class="px-4 py-2 bg-red-500 text-white rounded">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
